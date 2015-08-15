@@ -2,6 +2,8 @@ Simple Access
 ==
 A simple access system built around tidy club
 
+Video to prototype - https://goo.gl/photos/FiFTz3ucazfKPxP98
+
 Security Considerations
 --
 This works like nearly every other access card system used in commercial environments. Card ID is checked against the database to see if the user auth'd. This means any NFC/mifare compliant card should be able to be used, such as public transport cards and body implants. Because only the card id is checked it is possible for cards to be cloned easily. This should be discouraged via administration of your club via rules / penalties. Furthermore video recordings are recommended for entry and exit locations.
