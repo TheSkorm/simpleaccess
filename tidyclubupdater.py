@@ -59,8 +59,8 @@ for contact in contacts:
     memberships = club.memberships(contact=contact['id'])
     dates = []
     for membership in memberships:
-        if membership['state'] == "activated": ## only activated memberships allowed
-            dates.append(datetime.strptime(membership['end_date'],"%Y-%m-%d"))
+        # if membership['state'] == "activated": ## only activated memberships allowed - if we do this we can't warn about expiring users
+        dates.append(datetime.strptime(membership['end_date'],"%Y-%m-%d"))
     dates = sorted(dates)
     if len(dates) > 0:
         member["expires"] = dates[-1]  #take the furthest out expiry date
